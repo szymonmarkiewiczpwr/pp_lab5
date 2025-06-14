@@ -1,4 +1,8 @@
-package org.example;
+package org.plecak;
 
-public class Item {
+public record Item(int value, int weight) {
+    @Override
+    public String toString() {
+        return "v: %d w: %d".formatted(value, weight);
+    }
 }
